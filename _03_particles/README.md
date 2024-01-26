@@ -11,7 +11,7 @@
 
 ## Lesson notes
 
-### 01 - module
+### 01 - Module
 
 1. Review modules and why they're a good idea in engineering
 2. Start calling the <code>ball</code> from the last lesson a "particle" and explain there could be more than one--in fact, an entire particle system. This abstraction is a very good use case for an external module
@@ -27,5 +27,9 @@ update(canvas);
 draw(ctx);
 ```
 The animation loop calls the particle functions each frame but otherwise has no responsibility for them
-9. In the <code>init</code> function, delete <code>resetBall();</code> since that function has also been deleted. Replace that line with <code>update();</code>
+9. In the <code>init</code> function, delete <code>resetBall();</code> since that function has also been deleted. Replace with <code>update(canvas);</code>, which triggers the particle setup
 10. Running the code at this point removes the ball. There aren't any particles yet
+
+### 02 - Circles
+
+1. 
