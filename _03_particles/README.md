@@ -28,8 +28,14 @@
     ```
     The animation loop calls the particle functions each frame but otherwise has no responsibility for them
 9. In the <code>init</code> function, delete <code>resetBall();</code> since that function has also been deleted. Replace with <code>update(canvas);</code>, which triggers the particle setup
-10. Running the code at this point removes the ball. There aren't any particles yet
+10. Running the code at this point removes the ball and there's nothing left to see. There aren't any particles yet
 
 ### 02 - Circles
 
-1. 
+1. In <code>snow.js</code>, add new sections: "settings", "state", "setup", and "loop functions"
+2. "settings" are constants that define the boundaries of the system and each particle; "state" is an array containing all particles. Add code to these sections
+3. "setup" has two functions, <code>setupParticles</code> and <code>getParticle</code>. Add code to these functions. Review basic syntax and <code>lerp</code>, if necessary
+4. "loop functions" holds the exported functions, <code>update</code> and <code>draw</code>
+5. For now, <code>update</code> has one responsibility, to call <code>setupParticles</code> if it hasn't already been called. Point out that the <code>canvas</code> argument is passed along to <code>setupParticles</code>, where it is passed along to <code>getParticle</code> so positioning can stay within the canvas boundaries
+6. The <code>draw</code> function loops through all the particles and draws a semi-transparent white circle on the context. Point out that the last two characters in the <code>fillColor</code> hex value represent opacity
+7. Running the code at this point produces a random distribution of stationary, transluscent circles. Refreshing the page changes the distribution, but there are always the same number of circles, defined by the <code>numParticles</code> setting

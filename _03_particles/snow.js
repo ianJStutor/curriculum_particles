@@ -9,6 +9,7 @@ const maxRadius = 25;
 //state
 const particles = [];
 
+//setup
 function setupParticles(canvas) {
     for (let i=0; i<numParticles; i++) {
         particles[i] = getParticle(canvas);
