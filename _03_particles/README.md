@@ -33,9 +33,54 @@
 ### 02 - Circles
 
 1. In <code>snow.js</code>, add new sections: "settings", "state", "setup", and "loop functions"
-2. "settings" are constants that define the boundaries of the system and each particle; "state" is an array containing all particles. Add code to these sections
-3. "setup" has two functions, <code>setupParticles</code> and <code>getParticle</code>. Add code to these functions. Review basic syntax and <code>lerp</code>, if necessary
-4. "loop functions" holds the exported functions, <code>update</code> and <code>draw</code>
+2. "settings" are constants that define the boundaries of the system and each particle; "state" is an array containing all particles. Add code to these sections:
+    ```js
+    //settings
+    const numParticles = 250;
+    const minRadius = 5;
+    const maxRadius = 25;
+
+    //state
+    const particles = [];
+    ```
+3. "setup" has two functions, <code>setupParticles</code> and <code>getParticle</code>. Add code to these functions:
+    ```js
+    //setup
+    function setupParticles(canvas) {
+        for (let i=0; i<numParticles; i++) {
+            particles[i] = getParticle(canvas);
+        }
+        console.log(particles);
+    }
+
+    function getParticle({ width, height }) {
+        return {
+            x: lerp(0, width, Math.random()),
+            y: lerp(0, height, Math.random()),
+            r: lerp(minRadius, maxRadius, Math.random())
+        };
+    }
+    ```
+    Review basic syntax and <code>lerp</code>, if necessary
+4. "loop functions" holds the exported functions, <code>update</code> and <code>draw</code>:
+    ```js
+    //loop functions
+    export function update(canvas) {
+        if (!particles.length) return setupParticles(canvas);
+    }
+
+    export function draw(ctx) {
+        ctx.fillStyle = "#ffffff55";
+        for (let { x, y, r } of particles) {
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI*2);
+            ctx.fill();
+        }
+    }
+    ```
 5. For now, <code>update</code> has one responsibility, to call <code>setupParticles</code> if it hasn't already been called. Point out that the <code>canvas</code> argument is passed along to <code>setupParticles</code>, where it is passed along to <code>getParticle</code> so positioning can stay within the canvas boundaries
 6. The <code>draw</code> function loops through all the particles and draws a semi-transparent white circle on the context. Point out that the last two characters in the <code>fillColor</code> hex value represent opacity
 7. Running the code at this point produces a random distribution of stationary, transluscent circles. Refreshing the page changes the distribution, but there are always the same number of circles, defined by the <code>numParticles</code> setting
+
+### 03 - Movement
+
