@@ -25,7 +25,6 @@ A starter game design project using the browser; the HTML <code>canvas</code> el
 * Immutable settings versus state variables
 * Animation loop
 * Non-vector Euler integration
-* Collision detection algorithms
 * Game design
 
 Built with vanilla JavaScript, my favorite flavor!

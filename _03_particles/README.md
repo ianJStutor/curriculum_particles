@@ -21,12 +21,12 @@
 6. Delete the whole "ball state" section, the <code>ball</code> object and the <code>resetBall</code> function. These will be completely rewritten in the particle module
 7. In the <code>loop</code> function, move <code>const { width, height } = canvas;</code> into the "erase" section; these variables will no longer be used elsewhere in this function
 8. Delete the entire "update" and "draw" sections and replace with the following:
-```js
-//particles
-update(canvas);
-draw(ctx);
-```
-The animation loop calls the particle functions each frame but otherwise has no responsibility for them
+    ```js
+    //particles
+    update(canvas);
+    draw(ctx);
+    ```
+    The animation loop calls the particle functions each frame but otherwise has no responsibility for them
 9. In the <code>init</code> function, delete <code>resetBall();</code> since that function has also been deleted. Replace with <code>update(canvas);</code>, which triggers the particle setup
 10. Running the code at this point removes the ball. There aren't any particles yet
 
