@@ -8,6 +8,7 @@
 * <code>index.js</code> - JavaScript module for setting up an app
 * <code>fullscreenCanvas.js</code> - JavaScript module for managing a full-screen canvas that self adjusts with browser window resizing
 * <code>lib.js</code> - helper functions in one library
+* <code>snow.js</code> - particle module
 
 ## Lesson notes
 
