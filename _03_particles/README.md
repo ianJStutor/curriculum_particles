@@ -128,3 +128,5 @@
     * In the loop, <code>p</code> is the current particle, and its position is changed according to the axis velocities, then completely redefined--and repositioned above the canvas--when it drops off the bottom
     * Consider the <code>for</code> loop. Why this one instead of a <code>for...of</code> loop like in the <code>draw</code> function? The answer is that the particle <code>p</code> isn't just having its properties changed, it's being overwritten. Since <code>p</code> is local to the loop, then overwriting it won't be permanent. Instead, overwriting <code>particles[i]</code> will be permanent
     * Consider why <code>canvas.height</code>. Why isn't it destructured? The answer is that the <code>height</code> property is only being referenced once, which means that destructuring here creates more lookups rather than fewer
+
+4. Running the code at this point creates a fall of transluscent white circles, somewhat resembling snow. Tinker with the settings to see if a better solution can be found
