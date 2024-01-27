@@ -19,7 +19,7 @@ Complete curriculum and chunked code for teaching (starter) JavaScript engineeri
 
 ## Description
 
-A starter game design project using the browser; the HTML <code>canvas</code> element; mouse, touch, or pointer UI; and a new way of thinking about a game app. Students learn:
+A starter game design or generative art project using the browser; the HTML <code>canvas</code> element; mouse, touch, or pointer UI; and a new way of thinking about a game app. Students learn:
 * Separation of concerns
 * Module pattern
 * Immutable settings versus state variables
