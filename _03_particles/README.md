@@ -8,7 +8,7 @@
 * <code>index.js</code> - JavaScript module for setting up an app
 * <code>fullscreenCanvas.js</code> - JavaScript module for managing a full-screen canvas that self adjusts with browser window resizing
 * <code>lib.js</code> - helper functions in one library
-* <code>snow.js</code> - particle module
+* <code>particles.js</code> - particle module
 
 ## Lesson notes
 
@@ -16,7 +16,7 @@
 
 1. Review modules and why they're a good idea in engineering
 2. Start calling the <code>ball</code> from the last lesson a "particle" and explain there could be more than one--in fact, an entire particle system. This abstraction is a very good use case for an external module
-3. Create <code>snow.js</code> and provide two empty (for now) function exports, <code>update</code> and <code>draw</code>. <code>update</code> takes <code>canvas</code> as a parameter, and <code>draw</code> takes <code>ctx</code> as a parameter. Note: <code>update</code> will eventually also take <code>t</code> as a parameter, but the student isn't ready for that yet
+3. Create <code>particles.js</code> and provide two empty (for now) function exports, <code>update</code> and <code>draw</code>. <code>update</code> takes <code>canvas</code> as a parameter, and <code>draw</code> takes <code>ctx</code> as a parameter. Note: <code>update</code> will eventually also take <code>t</code> as a parameter, but the student isn't ready for that yet
 4. Add a dependency for the <code>lerp</code> function
 5. In <code>index.js</code>, add the new imports to the dependencies and remove <code>lerp</code>, which won't be needed in this animation-control JavaScript file
 6. Delete the whole "ball state" section, the <code>ball</code> object and the <code>resetBall</code> function. These will be completely rewritten in the particle module

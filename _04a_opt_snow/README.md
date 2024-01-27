@@ -1,4 +1,4 @@
-# Particles 04: Snow
+# Particles 04 (option A): Snow
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -14,7 +14,7 @@
 
 ### 01 - Artificial snow
 
-1. In the <code>snow.js</code> file, start by changing a few settings and adding new ones:
+1. Rename <code>particles.js</code> to <code>snow.js</code>. In that <code>snow.js</code> file, start by changing a few settings and adding new ones:
     ```js
     //settings
     const numParticles = 250;

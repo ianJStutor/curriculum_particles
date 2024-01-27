@@ -1,6 +1,6 @@
 //dependencies
 import { fullscreenCanvas } from "./fullscreenCanvas.js";
-import { update, draw } from "./snow.js";
+import { update, draw } from "./particles.js";
 
 //environment
 const canvas = document.querySelector("canvas");
