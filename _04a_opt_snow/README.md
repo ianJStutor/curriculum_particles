@@ -60,7 +60,7 @@
         ctx.restore();
     }
     ```
-    * <code>save()</code> and <code>restore()</code> permits changes while drawing these particles but won't let these changes affect any other drawing that might be happening
+    * <code>save()</code> and <code>restore()</code> permit changes while drawing these particles but won't let these changes affect any other drawing that might be happening outside this module
     * The value for <code>fillStyle</code> loses its last two characters. The alpha (opacity) will be handled individually for each particle instead of all particles uniformly
     * The <code>globalAlpha</code> property sets opacity for anything drawn after it's been set; in this case it's set before drawing each particle
 6. In <code>index.html</code>, change the CSS for the canvas to the following:
