@@ -5,10 +5,8 @@ import { lerp } from "./lib.js";
 const numParticles = 50;
 const minRadius = 10;
 const maxRadius = 150;
-const minVx = -1;
-const maxVx = 1;
-const minVy = 0.25;
-const maxVy = 1;
+const minSpeed = 0.25;
+const maxSpeed = 0.75;
 const color = "orangered";
 
 //state
@@ -27,8 +25,8 @@ function getParticle({ width, height }) {
         x: lerp(r, width - r, Math.random()),
         y: lerp(r, height - r, Math.random()),
         r,
-        vx: lerp(minVx, maxVx, Math.random()),
-        vy: lerp(minVy, maxVy, r/maxRadius),
+        vx: lerp(minSpeed, maxSpeed, Math.random()) * Math.random() < 0.5 ? 1 : -1,
+        vy: lerp(minSpeed, maxSpeed, Math.random()) * Math.random() < 0.5 ? 1 : -1,
         color
     };
 }
@@ -65,12 +63,10 @@ export function update(canvas) {
 }
 
 export function draw(ctx) {
-    ctx.save();
     for (let { x, y, r, color } of particles) {
         ctx.fillStyle = color;
         ctx.beginPath();
         ctx.arc(x, y, r, 0, Math.PI*2);
         ctx.fill();
     }
-    ctx.restore();
 }
