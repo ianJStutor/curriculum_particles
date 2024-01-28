@@ -2,11 +2,11 @@
 import { lerp } from "./lib.js";
 
 //settings
-const numParticles = 50;
+const numParticles = 25;
 const minRadius = 10;
-const maxRadius = 150;
-const minSpeed = 0.25;
-const maxSpeed = 0.75;
+const maxRadius = 50;
+const minSpeed = 0.05;
+const maxSpeed = 0.25;
 const color = "orangered";
 
 //state

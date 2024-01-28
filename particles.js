@@ -2,13 +2,11 @@
 import { lerp } from "./lib.js";
 
 //settings
-const numParticles = 250;
+const numParticles = 50;
 const minRadius = 5;
-const maxRadius = 100;
-const minVx = -3;
-const maxVx = 3;
-const minVy = 2;
-const maxVy = 25;
+const maxRadius = 50;
+const minSpeed = 4;
+const maxSpeed = 15;
 
 //state
 const particles = [];
@@ -22,14 +20,12 @@ function setupParticles(canvas) {
 
 function getParticle({ width, height }) {
     const r = lerp(minRadius, maxRadius, Math.random());
-    const norm = r/maxRadius;
     return {
         x: lerp(0, width, Math.random()),
         y: lerp(-height, -r, Math.random()),
         r,
-        vx: lerp(minVx, maxVx, Math.random()),
-        vy: lerp(minVy, maxVy, norm),
-        a: 1 - norm
+        vx: 0,
+        vy: lerp(minSpeed, maxSpeed, r/maxRadius)
     };
 }
 
@@ -49,13 +45,10 @@ export function update(canvas) {
 }
 
 export function draw(ctx) {
-    ctx.save();
-    ctx.fillStyle = "#ffffff";
-    for (let { x, y, r, a } of particles) {
-        ctx.globalAlpha = a;
+    ctx.fillStyle = "#ffffff55";
+    for (let { x, y, r } of particles) {
         ctx.beginPath();
         ctx.arc(x, y, r, 0, Math.PI*2);
         ctx.fill();
     }
-    ctx.restore();
 }
