@@ -33,7 +33,7 @@
 
 ### 02 - Circles
 
-1. In <code>snow.js</code>, add new sections: "settings", "state", "setup", and "loop functions"
+1. In <code>particles.js</code>, add new sections: "settings", "state", "setup", and "loop functions"
 2. "settings" are constants that define the boundaries of the system and each particle; "state" is an array containing all particles. Add code to these sections:
     ```js
     //settings
@@ -87,7 +87,7 @@
 
 ### 03 - Movement
 
-1. In <code>snow.js</code>, add new settings:
+1. In <code>particles.js</code>, add new settings:
     ```js
     const minSpeed = 4;
     const maxSpeed = 15;
@@ -127,7 +127,7 @@
     ```
     * If necessary, point out that if setup is needed the <code>return</code> statement ends the function and nothing after will be run
     * In the loop, <code>p</code> is the current particle, and its position is changed according to the axis velocities, then completely redefined--and repositioned above the canvas--when it drops off the bottom
-    * Consider the <code>for</code> loop. Why this one instead of a <code>for...of</code> loop like in the <code>draw</code> function? The answer is that the particle <code>p</code> isn't just having its properties changed, it's being overwritten. Since <code>p</code> is local to the loop, then overwriting it won't be permanent. Instead, overwriting <code>particles[i]</code> will be permanent
-    * Consider why <code>canvas.height</code>. Why isn't it destructured? The answer is that the <code>height</code> property is only being referenced once, which means that destructuring here creates more lookups rather than fewer
+    * Consider the <code>for</code> loop. Why this one instead of a <code>for...of</code> loop like in the <code>draw</code> function? The answer is that the particle <code>p</code> isn't just having its properties changed, it's being overwritten. Since <code>p</code> is local to the loop, then overwriting it won't be permanent. Instead, overwriting <code>particles[i]</code> will be permanent. Note that a more robust version of this code might make use of an object pool and reassign properties rather than overwrite, but that's for another lesson
+    * Consider <code>canvas.height</code>; why isn't it destructured? The answer is that the <code>height</code> property is only being referenced once, which means that destructuring here creates more lookups rather than fewer
 
 4. Running the code at this point creates a fall of transluscent white circles, somewhat resembling snow. Tinker with the settings to see if a better solution can be found
