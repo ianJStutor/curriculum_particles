@@ -44,6 +44,7 @@
     //state
     const particles = [];
     ```
+    If modules are new, point out that these global constants are scoped only to the module itself. Only the variables and functions that are exported are available outside the module
 3. "setup" has two functions, <code>setupParticles</code> and <code>getParticle</code>. Add code to these functions:
     ```js
     //setup
