@@ -1,4 +1,4 @@
-# Particles 01: Setup
+# Particles 01: Pong Ball
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -7,10 +7,11 @@
 * <code>index.html</code> - Entry file for every web app
 * <code>index.js</code> - JavaScript module for setting up an app
 * <code>fullscreenCanvas.js</code> - JavaScript module for managing a full-screen canvas that self adjusts with browser window resizing
+* <code>lib.js</code> - helper functions in one library
 
 ## Source
 
-[Canvas Starter (beginner)](https://github.com/ianJStutor/curriculum_canvas_starter/beginner)
+[Pong Ball](https://github.com/ianJStutor/curriculum_pongball/tree/eb6a88138698f9d8bd4fb79bc0bcb63458301ad6/_02_pong)
 
 ## Lesson notes
 

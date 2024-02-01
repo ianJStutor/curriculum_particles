@@ -1,4 +1,4 @@
-# Particles 04 (option A): Snow
+# Particles 03 (option A): Snow
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 

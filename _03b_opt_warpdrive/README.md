@@ -1,4 +1,4 @@
-# Particles 04 (option B): Warp drive
+# Particles 03 (option B): Warp drive
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
